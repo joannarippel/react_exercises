@@ -1,17 +1,13 @@
-/* CustomApp.css */
 
-/* App container */
 .App {
-  font-family: 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f7f7f7;
 }
 
-/* Header */
 .text-center {
   text-align: center;
   font-size: 36px;
@@ -19,20 +15,15 @@
   color: #2e2e2e;
 }
 
-/* Input and button container */
+
 .input-container {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Input field */
 input[type="text"] {
-  width: 70%;
+  width: 100%;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -40,11 +31,10 @@ input[type="text"] {
   color: #2e2e2e;
 }
 
-/* Add and Mark All Done buttons */
 .button-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .button {
@@ -60,11 +50,8 @@ input[type="text"] {
   background-color: #2e2e2e;
 }
 
-.mark-all-done-button {
-  background-color: #ff3e3e;
-}
 
-/* Todo list */
+
 .todo-list {
   list-style-type: none;
   padding: 0;
@@ -81,11 +68,27 @@ input[type="text"] {
   justify-content: space-between;
 }
 
-/* Mark as Done and Remove buttons */
-.icon-button {
-  background: none;
-  border: none;
-  font-size: 24px;
+.completed {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.todo-text {
+  font-size: 20px;
+  flex: 1;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.remove-todo {
   cursor: pointer;
-  color: #2e2e2e;
+  font-size: 20px;
+  padding: 10px;
+  color: #ff3e3e;
+}
+
+
+.done-icon {
+  font-size: 20px;
+  padding: 10px;
 }

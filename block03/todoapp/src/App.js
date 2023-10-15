@@ -37,28 +37,27 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-center">Todo App</h1>
+      <h1 className="text-center">Todo List App</h1>
       <div className="input-container">
-        <input
-          type="text"
-          placeholder="Add a new todo"
-          value={inputText}
+        <input type="text" placeholder="Add a new todo" value={inputText}
           onChange={(e) => setInputText(e.target.value)}
           onKeyPress={(e) => {
             if (e.key === 'Enter') handleAddTodo();
           }}
         />
-        <button className="add-button" onClick={handleAddTodo}>
+        <button className="button add-button" onClick={handleAddTodo}>
           Add
         </button>
-        <div className="button-separator"></div> {/* Add a separator */}
-        <button className="mark-all-done-button" onClick={handleMarkAllDone}>
+        <div className="button-separator"></div>
+        <button className="button mark-all-done-button" onClick={handleMarkAllDone}>
           Mark All Done
         </button>
       </div>
       <TodoList todos={todos} onToggleComplete={handleToggleComplete} onRemoveTodo={handleRemoveTodo} />
     </div>
   );
+   
+  
 }
 
 export default App;
